@@ -1,7 +1,7 @@
 import * as z from "zod";
 import crypto from 'crypto';
-import {ObjectId} from "mongodb";
-import {APIError} from "encore.dev/api";
+import { ObjectId } from "mongodb";
+import { APIError } from "encore.dev/api";
 import type { StampedEntity } from "../types/db/core";
 
 export const hash = (subject: string): string => {
@@ -26,14 +26,15 @@ export const createRequestSchema = <T extends z.ZodRawShape>(shape: T) => {
   return z.object(shape).strict();
 };
 
-type ThrowIfCantParseParams <T = any> = {
-    target: T;
-    using: z.ZodTypeAny;
+type ThrowIfCantParseParams<T = any> = {
+  target: T;
+  using: z.ZodTypeAny;
 }
 
-export const throwAPIErrorIfCannotParse = <T> ({ target, using: schema }: ThrowIfCantParseParams<T>) => {
-    const parseResult = schema.safeParse(target);
-    if (!parseResult.success) {
-        throw APIError.internal("Invalid Request");
-    }
+export const throwAPIErrorIfCannotParse = <T>({ target, using: schema }: ThrowIfCantParseParams<T>) => {
+  const parseResult = schema.safeParse(target);
+  if (!parseResult.success) {
+    console.log(parseResult.error);
+    throw APIError.internal("Invalid Request");
+  }
 };
