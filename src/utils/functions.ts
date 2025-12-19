@@ -34,7 +34,6 @@ type ThrowIfCantParseParams<T = any> = {
 export const throwAPIErrorIfCannotParse = <T>({ target, using: schema }: ThrowIfCantParseParams<T>) => {
   const parseResult = schema.safeParse(target);
   if (!parseResult.success) {
-    console.log(parseResult.error);
     throw APIError.internal("Invalid Request");
   }
 };
