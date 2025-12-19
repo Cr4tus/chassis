@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+# TypeScript build output (crucial: we build this on the fly)
+dist/
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
