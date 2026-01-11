@@ -15,8 +15,8 @@ importers:
         specifier: 4.0.1
         version: 4.0.1(vitest@4.0.1(@types/node@24.9.1))
       encore.dev:
-        specifier: ^1.53.1
-        version: 1.53.2
+        specifier: ^1.53.4
+        version: 1.53.4
       mongodb:
         specifier: ^6.20.0
         version: 6.21.0
@@ -454,8 +454,8 @@ packages:
       supports-color:
         optional: true
 
-  encore.dev@1.53.2:
-    resolution: {integrity: sha512-NfQuUe/Vvm77KkkVywI3zYxEOg9r3xDyYVIg/z0uskwj2IxIEY1501ForA27/kv+Q5m2OdXiS6x6Ox62ckCptQ==}
+  encore.dev@1.53.4:
+    resolution: {integrity: sha512-WTU/9Jo7d+wks5cwg2ajm2YBJcI6Peuf3R6kvz/9rK+ZUEi/MhQvZewWfXs8JD5qmJk0458RXv4dLEORQppJQQ==}
     engines: {node: '>=18.0.0'}
 
   es-module-lexer@1.7.0:
@@ -1127,7 +1127,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  encore.dev@1.53.2: {}
+  encore.dev@1.53.4: {}
 
   es-module-lexer@1.7.0: {}
 

@@ -28,7 +28,7 @@ export const createRequestSchema = <T extends z.ZodRawShape>(shape: T) => {
 
 type ThrowIfCantParseParams<T = any> = {
   target: T;
-  using: z.ZodTypeAny;
+  using: z.ZodType;
 }
 
 export const throwAPIErrorIfCannotParse = <T>({ target, using: schema }: ThrowIfCantParseParams<T>) => {
