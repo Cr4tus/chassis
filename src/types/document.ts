@@ -19,4 +19,5 @@ export type Document = {
     readonly status: DocumentStatus;
     readonly feedback?: string;
     readonly expirationDate: Date;
+    readonly lastUpdateDate: Date;
 }

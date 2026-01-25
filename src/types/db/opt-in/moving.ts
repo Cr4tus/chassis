@@ -30,13 +30,13 @@ export type MovingOptIn = {
     readonly teamSizeMax: number;
     readonly equipment: number;
     readonly specialServices: number;
-    readonly baseAddress: string;
-    readonly baseLocation: {
-        readonly type: "Point";
-        readonly coordinates: [number, number]; // [lng, lat]
-    };
+    readonly address: string;
     readonly areaOfActivity: {
         readonly radiusKm: number;
+        readonly center: {
+            readonly type: "Point";
+            readonly coordinates: [number, number]; // [lng, lat]
+        };
     };
     readonly documents: {
         readonly drivingLicenses: Document[];
